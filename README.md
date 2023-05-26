@@ -32,6 +32,6 @@ src/
 
 果不其然，该同学紧接着又进行了数十次类似的攻击尝试，使用了`abc'+'abc'+'abc`、`'||'abc'||'`、`'+'0'+ASCII(SUBSTR((SELECT+*+FROM+FLAG),1,1))+'`、`'+'0'+ASCII(SUBSTRING((SELECT * FROM FLAG)FROM 1 FOR 1))+'`、`'+CAST(ASCII(SUBSTR((SELECT * FROM flag) FROM 1 FOR 1)) AS CHAR)+'`等字符串作为用户名进行SQL注入攻击。有趣的是，有那么几次攻击尝试中，该同学尝试更换了`ASCII`和`SUBSTR`的大小写进行攻击，意义不明。
 
-从`Apr 23, 2023 23:53:45.585005000 中国标准时间`开始，攻击者使用`0'+ascii(substr((select * from flag) from 1 for 1))+'0`成功拿到了flag第一位的ASCII码。之后在很短时间内，直到`Apr 23, 2023 23:54:57.027632000 中国标准时间`，攻击者一共尝试了45次（即循环至``0'+ascii(substr((select * from flag) from 1 for 1))+'0``），之后就没有攻击记录了，说明该同学已经成功获取了flag。
+从`Apr 23, 2023 23:53:45.585005000 中国标准时间`开始，攻击者使用`0'+ascii(substr((select * from flag) from 1 for 1))+'0`成功拿到了flag第一位的ASCII码。之后在很短时间内，直到`Apr 23, 2023 23:54:57.027632000 中国标准时间`，攻击者一共尝试了45次（即循环至``0'+ascii(substr((select * from flag) from 45 for 1))+'0``），之后就没有攻击记录了，说明该同学已经成功获取了flag。
 
-根据服务器返回的html数据，我们也编写脚本自动解码出了该同学的flag`7498e38f-35de-4e93-b28a-5c36cfc9241f`。
+根据服务器返回的html数据，我们也编写脚本自动解码出了该同学第四题的flag：`7498e38f-35de-4e93-b28a-5c36cfc9241f`。
