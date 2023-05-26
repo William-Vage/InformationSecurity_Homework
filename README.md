@@ -16,7 +16,15 @@ src/
 
 ## 下面是攻击溯源的一些临时记录
 
+## 11
+
+只有一条流量数据，无法分析
+
 ## 12
+
+从`Apr 23, 2023 21:10:44.348292000 中国标准时间`持续到了`Apr 23, 2023 21:13:58.911153000 中国标准时间`，攻击者大量访问了web服务经常会泄露信息的路径，如`/.admin`、`/.access`、`/.AppleDB`、`/.git`等，扫描记录一共9086条，考虑是该同学利用`dirsearch`或类似工具对网站进行了目录扫描。
+
+...
 
 ```
 "http": {"POST /register.php HTTP/1.1\\r\\n": {"_ws.expert": {"http.chat": "", "_ws.expert.message": "POST /register.php HTTP/1.1\\r\\n", "_ws.expert.severity": "2097152", "_ws.expert.group": "33554432"}, "http.request.method": "POST", "http.request.uri": "/register.php", "http.request.version": "HTTP/1.1"}, "http.host": "10.0.0.4", "http.request.line": "Upgrade-Insecure-Requests: 1\r\n", "http.user_agent": "Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0", "http.accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8", "http.accept_language": "en-US,en;q=0.5", "http.accept_encoding": "gzip, deflate", "http.content_type": "application/x-www-form-urlencoded", "http.content_length_header": "67", "http.content_length_header_tree": {"http.content_length": "67"}, "http.connection": "close", "http.referer": "http://10.0.0.4/register.php", "http.cookie": "PHPSESSID=lhvtnq625or51joujrrvd872e7", "http.cookie_tree": {"http.cookie_pair": "PHPSESSID=lhvtnq625or51joujrrvd872e7"}, "\\r\\n": "", "http.request.full_uri": "http://10.0.0.4/register.php", "http.request": "1", "http.request_number": "1", "http.response_in": "4195680", "http.file_data": "email=fuboat%40outlook.com&username=%27%2Baba%2B%27&password=123456"}, "urlencoded-form": {"Form item: \"email\" = \"fuboat@outlook.com\"": {"urlencoded-form.key": "email", "urlencoded-form.value": "fuboat@outlook.com"}, "Form item: \"username\" = \"'+aba+'\"": {"urlencoded-form.key": "username", "urlencoded-form.value": "'+aba+'"}, "Form item: \"password\" = \"123456\"": {"urlencoded-form.key": "password", "urlencoded-form.value": "123456"}}}}}
