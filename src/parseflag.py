@@ -6,7 +6,7 @@
 import sys
 import re
 
-# 我们分到的6个ip后缀
+# 我们分到的6个ip后缀: 99.999.9.xx
 ip_list = [11, 12, 17, 25, 26, 28]
 
 # SQL正则匹配
@@ -17,7 +17,7 @@ sql_regex = [
     "ascii\(substr\(\(select \* from flag\) from ([0-9]+) for 1\)\)", # no data
     "ascii\(substr\(\(select \* from flag\) from ([0-9]+) for 1\)\)", # register.php no username
     "ascii\(substr\(\(select \* from flag\) from ([0-9]+) for 1\)\)", # succ
-    "ascii\(substr\(\(select \* from flag\) from ([0-9]+) for 1\)\)", # no data
+    "ascii\(substr\(\(select \* from flag\) from ([0-9]+) for 1\)\)", # TODO: parse username
     ]
 
 # 终止情形匹配
