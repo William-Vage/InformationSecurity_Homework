@@ -1,11 +1,5 @@
 # InformationSecurity_Homework
-This is a repository for Information Security 2023 semester homework.
 
-请每人建立一个以自己名字首字母缩写的分支
-
-请在自己的分支中创建代码文件夹，将所有作业完成过程中的代码上传到文件夹中
-
-请为每个文件夹写上readme！！！
-
-请书写必要的注释！！！
-
+dirsearch 工具产生了大量的日志，要过滤这部分日志可以采取以下方法
+1. request / response 是分别打印的，可以将 response 中 NOT FOUND 的内容过滤掉，减小审计量
+2. dirsearch 的日志是连续的，且按照字母顺序排列，最后一个字母是~，例如ip为26的可以从9088行开始看，前面的都没用
