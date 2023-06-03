@@ -1,7 +1,7 @@
 # 第6题 攻击溯源故事
 ## 关于代码
 - my_parser.py
-日志解析器，寻找
+日志解析器，按照自己的想法筛选日志用
 - flag_parser.py 全局寻找符合flag格式的字符串
 - dirsearcg_ignore.py 
 dirsearch 工具产生了大量的日志，要过滤这部分日志可以采取以下方法
