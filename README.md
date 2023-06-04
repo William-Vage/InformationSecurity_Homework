@@ -73,7 +73,7 @@ dirsearch 工具产生了大量的日志，要过滤这部分日志可以采取�
 (成功动作)`Apr 18, 2023 10:37:21.218745000 CST` 攻击者访问/status路由，成功建立了反向shell
 ```
 {"http": {"GET /status HTTP/1.1\\r\\n": {"_ws.expert": {"http.chat": "", "_ws.expert.message": "GET /status HTTP/1.1\\r\\n", "_ws.expert.severity": "2097152", "_ws.expert.group": "33554432"}, "http.request.method": "GET", "http.request.uri": "/status", "http.request.version": "HTTP/1.1"}, "http.host": "10.0.0.6", "http.request.line": "Connection: keep-alive\r\n", "http.user_agent": "python-requests/2.27.1", "http.accept_encoding": "gzip, deflate, br", "http.accept": "*/*", "http.connection": "keep-alive", "\\r\\n": "", "http.request.full_uri": "http://10.0.0.6/status", "http.request": "1", "http.request_number": "3", "http.prev_request_in": "4791848"}, "frame.time": "Apr 18, 2023 10:37:21.218745000 CST"}
-
+```
 
 (成功动作) `Apr 18, 2023 10:37:36.609982000` 攻击者利用反弹shell，开始在靶机内寻找flag，先是查看靶机是否支持grep命令，然后运行`grep -rni "flag=" /proc`命令，查找在/proc目录及其所有子目录中，搜索所有包含flag=（忽略大小写）的行
 ```
